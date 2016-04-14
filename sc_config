@@ -1,0 +1,11 @@
+var userAdmin = BT.AppBuilder.create({
+  name: 'alerttest',
+  title: "AlertTest",
+  minifyHtml: false,
+  minifyScripts: false,
+  path: dirname()
+});
+
+BT.serverConfig = {
+  localOnly: false
+}
