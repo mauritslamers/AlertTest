@@ -8,7 +8,13 @@
 // See comments for some pointers on what to do next.
 //
 AlertTest.main = function main() {
-    AlertTest.getPath( 'mainPage.mainPane' ).append();
+   // don't do this, use the state chart to do this.
+  //AlertTest.getPath( 'mainPage.mainPane' ).append();
+
+  // set the state chart to be default responder, then init it
+  var sc = AlertTest.statechart;
+  SC.RootResponder.responder.set('defaultResponder', sc); // make default responder
+  sc.initStatechart();
 };
 
 

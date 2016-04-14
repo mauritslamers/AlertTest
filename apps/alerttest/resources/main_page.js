@@ -18,29 +18,7 @@ AlertTest.mainPage = SC.Page.design( {
             childViews: [ 'alertButton' ],
 
             alertButton: SC.ButtonView.design( {
-                action: function () {
-                    SC.AlertPane.warn( {
-                        message: "Are you sure?",
-                        description: "Press OK/Cancel to set the label",
-                        layout: {
-                            centerX: 0,
-                            centerY: 0,
-                            width: 350
-                        },
-                        buttons: [
-                            {
-                                title: "OK",
-                                action: 'doOK',
-                                target: AlertTest.alertController
-                            },
-                            {
-                                title: "Cancel",
-                                action: 'doCancel',
-                                target: AlertTest.alertController
-                            }
-                        ]
-                    } );
-                },
+                action: 'showAlert',
                 layout: {
                     centerX: 0,
                     centerY: 0,
@@ -72,6 +50,7 @@ AlertTest.mainPage = SC.Page.design( {
             anchorLocation: SC.ANCHOR_BOTTOM,
             size: 20
         } )
+
     } )
 
 } );

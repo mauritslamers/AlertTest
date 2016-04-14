@@ -3,7 +3,7 @@ var userAdmin = BT.AppBuilder.create({
   title: "AlertTest",
   minifyHtml: false,
   minifyScripts: false,
-  path: dirname()
+  path: 'apps/alerttest'
 });
 
 BT.serverConfig = {
